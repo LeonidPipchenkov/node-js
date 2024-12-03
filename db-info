@@ -1,0 +1,21 @@
+REMOTE SERVER ON MONGODB ATLAS
+ Project: MONGODB
+ Cluster: Mongodb
+ User:
+  username - t70a
+  password - mqMciG6m.AH
+ Connection address:
+  mongodb+srv://t70a:mqMciG6m.AH@mongodb.guuvb.mongodb.net/?retryWrites=true&w=majority&appName=Mongodb
+
+LOCAL SERVER IN DOCKER CONTAINER
+ User:
+  username - root
+  password - root
+ Connection address:
+  mongodb://root:root@localhost:27017
+
+UPLOADING MONGODB SAMPLE DATA TO LOCAL DATABASE
+ 1. https://atlas-education.s3.amazonaws.com/sampledata.archive
+ 2. docker exec node-js-mongo-1 mkdir -p /db_dump
+ 3. docker cp sampledata.archive node-js-mongo-1:/db_dump
+ 4. docker exec node-js-mongo-1 mongorestore --username root --password root --authenticationDatabase admin --archive=/db_dump/sampledata.archive
