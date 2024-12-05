@@ -1,7 +1,7 @@
-import { findAllOrderFromSunGreater4 } from './service.js'
+import { findAllOrderFromSunBetween2and5MainAtmosphereO2 } from './service.js'
 
 async function run() {
-  const planets = await findAllOrderFromSunGreater4()
+  const planets = await findAllOrderFromSunBetween2and5MainAtmosphereO2()
   console.log(planets)
 }
 
